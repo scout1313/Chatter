@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/PermissionsEx.jar"/>
+	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/Permissions.jar"/>
+	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/EssentialsGroupManager.jar"/>
+	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/bpermissions.jar"/>
+	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/bukkit.jar"/>
+	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/craftbukkit.jar"/>
+	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/Factions.jar"/>
+	<classpathentry kind="lib" path="/home/michiel/Downloads/Multiverse-Core.jar"/>
+	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/SpoutAPI.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

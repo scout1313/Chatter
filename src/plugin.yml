@@ -1,0 +1,12 @@
+name: Chatter
+main: com.dral.Chatter.Chatter
+version: 2.1.2
+author: Dral
+website: http://twitter.com/dralletje
+commands:
+    reloadchatter:
+        description: reloads chatter :P
+        usage: /reloadchatter
+    chatter:
+        description: just nothing :P
+        usage: /chatter
