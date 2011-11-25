@@ -48,7 +48,10 @@ public class ChatterPlayerListener extends PlayerListener {
 			String[] messages = BetterChatWrapper.wrapText(Chatter.format.parseChat(player, msg) + " ");
 			for (int i = 0; i < messages.length; i++) {
 				String message = messages[i];
-				Chatter.server.broadcastMessage(message);
+				Player[] players = Chatter.server.getOnlinePlayers();
+				for(Player playertemp : players) {
+					playertemp.sendMessage(message);
+				}
 			}
 			event.setCancelled(true);
 		} else {
