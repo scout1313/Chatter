@@ -1,6 +1,6 @@
 name: Chatter
 main: com.dral.Chatter.Chatter
-version: 2.1.2
+version: 2.1.5
 author: Dral
 website: http://twitter.com/dralletje
 commands:
