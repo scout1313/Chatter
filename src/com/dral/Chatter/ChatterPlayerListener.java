@@ -38,13 +38,14 @@ public class ChatterPlayerListener extends PlayerListener {
 		
 		Player player = event.getPlayer();
 		String msg = event.getMessage();
+		String format = Chatter.format.parseChat(player, msg) + " ";
 		
 		if (Chatter.spoutisEnabled) {
 			SpoutManager.getAppearanceManager().setGlobalTitle(player, Chatter.format.parseChat(player, "", Chatter.nameFormat));
 		}
 		
 		if (Chatter.textwrapping) {
-			//event.setFormat(Talker.parseChat(p, msg) + " " );
+			event.setFormat(format);
 			String[] messages = BetterChatWrapper.wrapText(Chatter.format.parseChat(player, msg) + " ");
 			for (int i = 0; i < messages.length; i++) {
 				String message = messages[i];
@@ -55,7 +56,7 @@ public class ChatterPlayerListener extends PlayerListener {
 			}
 			event.setCancelled(true);
 		} else {
-			event.setFormat(Chatter.format.parseChat(player, msg) + " ");
+			event.setFormat(format);
 		}
 	}
 	
