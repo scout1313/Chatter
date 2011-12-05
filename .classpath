@@ -2,14 +2,18 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/PermissionsEx.jar"/>
-	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/Permissions.jar"/>
-	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/EssentialsGroupManager.jar"/>
-	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/bpermissions.jar"/>
-	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/bukkit.jar"/>
-	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/craftbukkit.jar"/>
-	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/Factions.jar"/>
-	<classpathentry kind="lib" path="/home/michiel/Downloads/Multiverse-Core.jar"/>
-	<classpathentry kind="lib" path="/home/michiel/Dropbox/shared/bukkit-workplace/import/SpoutAPI.jar"/>
+	<classpathentry kind="var" path="USER_HOME/Downloads/PermissionsEx.jar"/>
+	<classpathentry kind="var" path="USER_HOME/Downloads/Permissions.jar"/>
+	<classpathentry kind="var" path="USER_HOME/Downloads/EssentialsGroupManager.jar"/>
+	<classpathentry kind="var" path="USER_HOME/Downloads/bpermissions.jar"/>
+	<classpathentry kind="var" path="USER_HOME/Downloads/Factions.jar"/>
+	<classpathentry kind="var" path="USER_HOME/Downloads/spoutapi-dev-SNAPSHOT.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/Morgan/Downloads/Javadoc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Bukkit"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Multiverse"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/CraftBukkit"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
