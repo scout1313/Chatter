@@ -25,15 +25,15 @@ public class ChatterConfigThing {
     protected void defaultConfig() {
         Configuration config = Chatter.config;
         config.save();
-        
+
         config.setProperty("name-format", Chatter.nameFormat);
-		config.setProperty("text-wrapping", Chatter.textwrapping);
-		config.setProperty("censor-list", Chatter.censorWords);
-		config.setProperty("first-message-format", Chatter.chatFormat);
-		config.setProperty("date-format", Chatter.dateFormat);
-		config.setProperty("me-format", Chatter.meFormat);
-		config.setProperty("nether-name", Chatter.nether_name);
-		config.setProperty("log-everything", Chatter.logEverything);
+        config.setProperty("text-wrapping", Chatter.textwrapping);
+        config.setProperty("censor-list", Chatter.censorWords);
+        config.setProperty("first-message-format", Chatter.chatFormat);
+        config.setProperty("date-format", Chatter.dateFormat);
+        config.setProperty("me-format", Chatter.meFormat);
+        config.setProperty("nether-name", Chatter.nether_name);
+        config.setProperty("log-everything", Chatter.logEverything);
         config.save();
     }
 
@@ -57,7 +57,6 @@ public class ChatterConfigThing {
         }
 
 
-
         if (config.getProperty("date-format") == null) {
             config.setProperty("date-format", Chatter.dateFormat);
             hasChanged = true;
@@ -73,7 +72,7 @@ public class ChatterConfigThing {
             config.removeProperty("first-message-format");
             hasChanged = true;
         }
-        
+
         if (config.getProperty("message-format") == null) {
             config.setProperty("message-format", Chatter.chatFormat);
             hasChanged = true;
@@ -83,12 +82,12 @@ public class ChatterConfigThing {
             config.setProperty("nether-name", Chatter.nether_name);
             hasChanged = true;
         }
-        
+
         if (config.getProperty("log-everything") == null) {
             config.setProperty("log-everything", Chatter.logEverything);
             hasChanged = true;
         }
-        
+
         if (config.getProperty("factions-support") != null) {
             config.removeProperty("factions-support");
             hasChanged = true;
