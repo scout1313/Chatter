@@ -1,7 +1,7 @@
 package com.dral.Chatter;
 
 public class BetterChatWrapper {
-private static final int[] characterWidths = new int[] {
+    private static final int[] characterWidths = new int[] {
         1, 9, 9, 8, 8, 8, 8, 7, 9, 8, 9, 9, 8, 9, 9, 9,
         8, 8, 8, 8, 9, 9, 8, 9, 8, 8, 8, 8, 8, 9, 9, 9,
         4, 2, 5, 6, 6, 6, 6, 3, 5, 5, 5, 6, 2, 6, 2, 6,

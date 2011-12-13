@@ -23,7 +23,7 @@ package com.dral.Chatter;
 import com.massivecraft.factions.P;
 import com.nijiko.permissions.PermissionHandler;
 import com.nijikokun.bukkit.Permissions.Permissions;
-import com.onarandombox.MultiverseCore.MultiverseCore;
+import com.onarandombox.MultiverseCore.api.Core;
 import de.bananaco.permissions.info.InfoReader;
 import de.bananaco.permissions.worlds.WorldPermissionsManager;
 import org.anjocaido.groupmanager.permissions.AnjoPermissionsHandler;
@@ -79,7 +79,7 @@ public class Chatter extends JavaPlugin {
 
     public P factionpluginthing;
     public boolean factionisEnabled = false;
-    public MultiverseCore multiversepluginthing;
+    public Core multiversepluginthing;
     public boolean multiverseisEnabled = false;
     public SpoutManager spoutpluginthing;
     public boolean spoutisEnabled = false;
@@ -107,7 +107,7 @@ public class Chatter extends JavaPlugin {
 
         Plugin multiverse = getServer().getPluginManager().getPlugin("Multiverse-Core");
         if (multiverse != null) {
-            this.multiversepluginthing = (MultiverseCore) multiverse;
+            this.multiversepluginthing = (Core) multiverse;
             this.multiverseisEnabled = true;
         }
 
@@ -130,7 +130,7 @@ public class Chatter extends JavaPlugin {
         pm.registerEvent(Event.Type.PLAYER_CHAT, pListener, Event.Priority.Highest, this);
         pm.registerEvent(Event.Type.PLAYER_COMMAND_PREPROCESS, pListener, Event.Priority.Normal, this);
 
-        logIt("Chatter loaded correctly! let's do this!");
+        log.info("Chatter loaded correctly! let's do this!");
     }
 
     public void onDisable() {
@@ -158,7 +158,7 @@ public class Chatter extends JavaPlugin {
         if (permissionsPluginTest != null) {
             pexPermissions = PermissionsEx.getPermissionManager();
             PEXB = true;
-            logIt("Found PEX <3");
+            log.info("Found PEX <3");
             return;
         }
 
@@ -167,7 +167,7 @@ public class Chatter extends JavaPlugin {
             bPermB = true;
             bInfoR = de.bananaco.permissions.Permissions.getInfoReader();
             bPermS = de.bananaco.permissions.Permissions.getWorldPermissionsManager();
-            logIt("bPermissions found :D using it now");
+            log.info("bPermissions found :D using it now");
             return;
         }
 
@@ -176,19 +176,19 @@ public class Chatter extends JavaPlugin {
             permissions = ((Permissions) permissionsPluginTest).getHandler();
             permissionsB = true;
             permissions3 = permissionsPluginTest.getDescription().getVersion().startsWith("3");
-            logIt("found permissions3, my day is good :D");
+            log.info("found permissions3, my day is good :D");
             return;
         }
 
         permissionsPluginTest = getServer().getPluginManager().getPlugin("GroupManager");
         if (permissionsPluginTest != null) {
             gmPermissionsB = true;
-            logIt("you have groupmanager? you have essentials!! shame on you :P");
+            log.info("you have groupmanager? you have essentials!! shame on you :P");
             return;
         }
 
-        logIt("no proper permissions system found, more to come in the future");
-        logIt("disabling for now :(");
+        log.severe("no proper permissions system found, more to come in the future");
+        log.severe("disabling for now :(");
         pm.disablePlugin(this);
     }
 
